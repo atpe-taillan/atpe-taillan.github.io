@@ -26,7 +26,13 @@ h1 {
 
 .valid {
 	text-align: center;
-  	padding: 25px 25px 25px 80px;
+  	padding: 25px 25px 25px 25px;
+	color: #AAAAAA;
+}
+
+.link {
+	text-align: center;
+  	padding: 25px 25px 0px 25px;
 	color: #AAAAAA;
 }
 
@@ -153,20 +159,31 @@ input[type=radio]:checked ~ label{
   </li>
 </ul>
 
-<div  id="validDiv" onclick="valid()" class="valid"><h1>VERIFIER</h1></div>
-<div  class="valid"><h1><a  id="link" href="https://www.google.com/maps/dir/P%C3%B4le+Culturel+de+la+Haye+-+M%C3%A9diath%C3%A8que+Municipale,+8+Rue+de+Calavet,+33320+Le+Taillan-M%C3%A9doc/Skatepark/@44.9149753,-0.6836907,17.25z/data=!4m14!4m13!1m5!1m1!1s0xd54d6c86a7184d1:0x480586d0e491dbef!2m2!1d-0.6796524!2d44.9129965!1m5!1m1!1s0xd54d1505a8e9e29:0x13e337055881ee21!2m2!1d-0.68507!2d44.9158202!3e2"> </a></h1>
+<div  id="validDiv" onclick="valid()" class="valid"><h1  id="result">VERIFIER</h1></div>
+<div  class="link"><h1><a  id="link" href="" </a></h1>
 </div>
 
 
 
 <script>
 function valid() {
-  document.getElementById("a").innerHTML = "";
-  document.getElementById("b").innerHTML = "";
-  document.getElementById("c-option").checked = true;
-  document.getElementById("d").innerHTML = "";
-  document.getElementById("validDiv").innerHTML = "";
-  document.getElementById("link").innerHTML = "ETAPE SUIVANTE";
+
+  if(document.getElementById("c-option").checked)
+  {
+  	document.getElementById("result").innerHTML = "BRAVO";
+  	document.getElementById("link").innerHTML = "ETAPE SUIVANTE";
+    document.getElementById("link").href = "https://www.google.com/maps/dir/P%C3%B4le+Culturel+de+la+Haye+-+M%C3%A9diath%C3%A8que+Municipale,+8+Rue+de+Calavet,+33320+Le+Taillan-M%C3%A9doc/Skatepark/@44.9149753,-0.6836907,17.25z/data=!4m14!4m13!1m5!1m1!1s0xd54d6c86a7184d1:0x480586d0e491dbef!2m2!1d-0.6796524!2d44.9129965!1m5!1m1!1s0xd54d1505a8e9e29:0x13e337055881ee21!2m2!1d-0.68507!2d44.9158202!3e2"
+    
+  	document.getElementById("a").innerHTML = "";
+  	document.getElementById("b").innerHTML = "";
+  	document.getElementById("c-option").checked = true;
+  	document.getElementById("d").innerHTML = "";}
+  else
+  {
+  	document.getElementById("result").innerHTML = "";
+  	document.getElementById("result").innerHTML = "Dommage Ressayez<p>VERIFIER<\p>";
+    
+  }
 
 }
 
