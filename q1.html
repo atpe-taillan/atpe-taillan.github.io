@@ -24,6 +24,17 @@ h1 {
 	color: #AAAAAA;
 }
 
+.valid {
+	text-align: center;
+  	padding: 25px 25px 25px 80px;
+	color: #AAAAAA;
+}
+
+.valid h1:hover{
+	color: #FFFFAA;
+}
+
+
 .container ul{
   list-style: none;
   margin: 0;
@@ -113,28 +124,28 @@ input[type=radio]:checked ~ label{
 <h1>Selon la légende, pourquoi la ligne ferroviaire Moscou - St Petersbourg fait-elle un détour de 17km ?:</h1>
 <img height="300" src=https://cdni.rbth.com/rbthmedia/images/2019.09/original/5d835a9315e9f92a40770ff1.jpg></img>
 <ul>
-  <li>
+  <li id="a">
     <input type="radio" id="a-option" name="selector">
     <label for="a-option">Parce que les ouvriers étaient bourrés.</label>
     
     <div class="check"></div>
   </li>
   
-  <li>
+  <li id="b">
     <input type="radio" id="b-option" name="selector">
     <label for="b-option">Parce que le froid a tordu les rails.</label>
     
     <div class="check"><div class="inside"></div></div>
   </li>
   
-  <li>
+  <li id="c">
     <input type="radio" id="c-option" name="selector">
     <label for="c-option">Parce que le Tsar avait laissé un doigt dépasser de sa règle.</label>
     
     <div class="check"><div class="inside"></div></div>
   </li>
   
-  <li>
+  <li id="d">
     <input type="radio" id="d-option" name="selector">
     <label for="d-option">Parce qu’avant il y avait un village qui a disparu depuis.</label>
     
@@ -142,7 +153,18 @@ input[type=radio]:checked ~ label{
   </li>
 </ul>
 
+<div  id="validDiv" onclick="valid()" class="valid"><h1>VERIFIER</h1></div>
+<div  id="buttonDiv" onclick="valid()" class="valid"></div>
 
 
+<script>
+function valid() {
+  document.getElementById("a").innerHTML = "";
+  document.getElementById("b").innerHTML = "";
+  document.getElementById("c-option").checked = true;
+  document.getElementById("d").innerHTML = "";
+  document.getElementById("validDiv").innerHTML = "";;
+}
+</script>
 </body>
 </html>
