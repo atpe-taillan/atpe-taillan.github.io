@@ -7,23 +7,33 @@
 <body>
 
 <div class="container">
-<img width="500" src=rebu.png></img>
+<img  src=rebu.png></img>
 <h1>Résout ce rébus pour connaitre le nom de ce quartier</h1>
 
 <ul>
   <li id="a">
     <input type="radio" id="a-option" name="selector">
-    <label for="a-option">Une crosse</label>
+    <label for="a-option">Bois de soltordotte  </label>
     <div class="check"></div>
   </li>  
   <li id="b">
     <input type="radio" id="b-option" name="selector">
-    <label for="b-option">Gratte pas, va te laver</label>    
+    <label for="b-option">Bois de la landhotte</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
   <li id="c">
     <input type="radio" id="c-option" name="selector">
-    <label for="c-option">Propreté donne santé</label>    
+    <label for="c-option">Buche de latordotte</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+  <li id="d">
+    <input type="radio" id="d-option" name="selector">
+    <label for="d-option">Bois de solenoel</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+  <li id="e">
+    <input type="radio" id="e-option" name="selector">
+    <label for="e-option">Buche de latordotte</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
 </ul>
@@ -41,7 +51,7 @@
 
 function valid() {
 	resultDiv = document.getElementById("ResultDiv")
-  if(document.getElementById("c-option").checked)
+  if(document.getElementById("b-option").checked)
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
@@ -54,9 +64,10 @@ function valid() {
   	newDiv.appendChild(newlink);
   	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
   	document.getElementById("a").innerHTML = "";
-  	document.getElementById("b").innerHTML = "";
-  	document.getElementById("c-option").checked = true;
-  	document.getElementById("d").innerHTML = "";}
+  	document.getElementById("c").innerHTML = "";
+  	document.getElementById("b-option").checked = true;
+  	document.getElementById("d").innerHTML = "";
+  	document.getElementById("e").innerHTML = "";}
   else
   {
   	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
