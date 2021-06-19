@@ -16,16 +16,21 @@ body, html{
   padding: auto;
 }
 pre {
-  font-size: 1.7em;
+  font-size: 1.0em;
 	color: #000000;
   line-height:1.7em; 
 	font-family: 'Lato', sans-serif;
-  font-weight: 10;
+  font-weight: 10;    white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 h1 {
   font-size: 2.5em;
 	color: #000000;
+	font-family: 'Lato', sans-serif;
 }
 
 .valid {
@@ -70,7 +75,7 @@ ul li input[type=radio]{
 ul li label{
   display: block;
   position: relative;
-  font-size: 2.5em;
+  font-size: 3.0em;
   padding: 25px 25px 25px 80px;
   margin:  auto;
   height:  auto;
@@ -101,7 +106,7 @@ ul li .check{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 90%;
 }
 
 ul li:hover .check {
