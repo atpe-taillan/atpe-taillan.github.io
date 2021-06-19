@@ -2,34 +2,44 @@
 <html>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Lato');
-@import url("https://atpe-taillan.github.io/styles.css");
+@import url("styles.css");
 </style>
 <body>
 
 <div class="container">
-<h1>Selon la légende, pourquoi la ligne ferroviaire Moscou - St Petersbourg fait-elle un détour de 17km ?:</h1>
-<img height="300" src=https://cdni.rbth.com/rbthmedia/images/2019.09/original/5d835a9315e9f92a40770ff1.jpg></img>
+<img width="500" src=maitre.jpeg></img>
+<h2>
+<pre>
+  - Viens par là, on va se faufiler pour fouiller la cour.
+  - T’es sûr qu’on ne va pas se faire pincer?
+  - Allez, on n’a pas le choix 
+  
+  - Et vous 2 qu’est que ce que vous faites là ? allez donc jouer ailleurs !
+  - On cherche notre ballon
+  - Y’a pas de ballon ici, circulez !
+  
+</pre>
+
+
+<span ></span>
+<h1>Qui était Jean Pometan ?</h1>
+
 <ul>
   <li id="a">
     <input type="radio" id="a-option" name="selector">
-    <label for="a-option">Parce que les ouvriers étaient bourrés.</label>
+    <label for="a-option">Charpentier qui a participé à la construction de l’école</label>
     <div class="check"></div>
   </li>  
   <li id="b">
     <input type="radio" id="b-option" name="selector">
-    <label for="b-option">Parce que le froid a tordu les rails.</label>    
+    <label for="b-option">Vigneron du château du Taillan</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
   <li id="c">
     <input type="radio" id="c-option" name="selector">
-    <label for="c-option">Parce que le Tsar avait laissé un doigt dépasser de sa règle.</label>    
+    <label for="c-option">Maire de 1977 à 1995</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
-  <li id="d">
-    <input type="radio" id="d-option" name="selector">
-    <label for="d-option">Parce qu’avant il y avait un village qui a disparu depuis.</label>    
-    <div class="check"><div class="inside"></div></div>
-  </li>
 </ul>
 
 <div id="ResultDiv">
@@ -38,28 +48,23 @@
 
 <script>
   nextStepLink = "https://www.google.com/maps/dir/P%C3%B4le+Culturel+de+la+Haye+-+M%C3%A9diath%C3%A8que+Municipale,+8+Rue+de+Calavet,+33320+Le+Taillan-M%C3%A9doc/Skatepark/@44.9149753,-0.6836907,17.25z/data=!4m14!4m13!1m5!1m1!1s0xd54d6c86a7184d1:0x480586d0e491dbef!2m2!1d-0.6796524!2d44.9129965!1m5!1m1!1s0xd54d1505a8e9e29:0x13e337055881ee21!2m2!1d-0.68507!2d44.9158202!3e2"
-
-  // crée un nouvel élément div
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
   newDiv.innerHTML = "<h1>VERIFIER</h1>" 
 
-  // ajoute le nouvel élément créé et son contenu dans le DOM
-
 function valid() {
 	resultDiv = document.getElementById("ResultDiv")
   if(document.getElementById("c-option").checked)
-  {
-  	
+  {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML = "!!! BRAVO !!! => "
+  	newDiv.innerHTML = ""
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
     newlink.href =  nextStepLink;
-    newlink.innerHTML = "ETAPE SUIVANTE";
+    newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
   	newDiv.appendChild(newlink);
   	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
   	document.getElementById("a").innerHTML = "";
@@ -68,8 +73,7 @@ function valid() {
   	document.getElementById("d").innerHTML = "";}
   else
   {
-  	document.getElementById("result").innerHTML = "";
-  	document.getElementById("result").innerHTML = "Faux!!! REESSAYEZ";    
+  	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
   }
 }
 </script>
