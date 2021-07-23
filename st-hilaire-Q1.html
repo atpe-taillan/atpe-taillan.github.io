@@ -7,7 +7,7 @@
 <body>
 
 <div class="container">
-<img  src=rigodon.png class="center"></img>
+<img  src=Q1.PNG class="center"></img>
 <h2>
 <pre>
   - Ah ben nous voilà devant la statue de St-Hilaire !
@@ -21,6 +21,7 @@ Un joueur de tambour passe par là, on lui demande s’il a vu le ballon.
 </pre>
 
 
+<img  src=rigodon.png class="center"></img>
 <span ></span>
 <h1>Que tient saint Hilaire dans ses mains ?</h1>
 
@@ -60,7 +61,7 @@ Un joueur de tambour passe par là, on lui demande s’il a vu le ballon.
 
 function valid() {
 	resultDiv = document.getElementById("ResultDiv")
-  if(document.getElementById("c-option").checked)
+  if(document.getElementById("b-option").checked)
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
@@ -73,9 +74,8 @@ function valid() {
   	newDiv.appendChild(newlink);
   	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
   	document.getElementById("a").innerHTML = "";
-  	document.getElementById("b").innerHTML = "";
-  	document.getElementById("c-option").checked = true;
-  	document.getElementById("d").innerHTML = "";}
+  	document.getElementById("c").innerHTML = "";
+  	document.getElementById("b-option").checked = true;
   else
   {
   	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    

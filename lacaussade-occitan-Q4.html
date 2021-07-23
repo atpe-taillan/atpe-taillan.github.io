@@ -7,7 +7,7 @@
 <body>
 
 <div class="container">
-<img src=romain2.jpg class="center"></img>
+<img src=Q4.PNG class="center"></img>
 <h2>
 <pre>
   - Regarde, la voisine est dans son jardin. On va lui demander si elle a vu notre ballon ?
@@ -52,7 +52,7 @@
 
 function valid() {
 	resultDiv = document.getElementById("ResultDiv")
-  if(document.getElementById("c-option").checked)
+  if(document.getElementById("a-option").checked)
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
@@ -64,10 +64,9 @@ function valid() {
     newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
   	newDiv.appendChild(newlink);
   	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
-  	document.getElementById("a").innerHTML = "";
+  	document.getElementById("c").innerHTML = "";
   	document.getElementById("b").innerHTML = "";
-  	document.getElementById("c-option").checked = true;
-  	document.getElementById("d").innerHTML = "";}
+  	document.getElementById("a-option").checked = true;
   else
   {
   	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
