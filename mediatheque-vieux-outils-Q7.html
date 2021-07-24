@@ -1,1 +1,83 @@
-TODO Q7
+<!DOCTYPE html>
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Special Elite');
+@import url("styles.css");
+</style>
+<body>
+
+<div class="container">
+<img src="Q0.PNG"  class="center"></img>
+<h2>
+<pre>
+
+    - Pfff c’était long, suis ben fatigué
+    - OK on peut faire un petite pause, asseyons nous
+    - Zzzzzzz Zzzzzz
+    - Hola la, je crois que je me suis endormi : j’ai parlé à une trompette tandis que toi tu blablater avec un Atlas. Normal !
+    - Et y nous disais quoi ?
+    - Ils nous disaient qu’on ne joue pas au ballon là où il y a des outils et donc pas sur le domaine viticole de la Haye.  
+    - l faut donc continuer à chercher
+    
+</pre>
+
+
+<span ></span>
+<h1>Comment s’appelle cet outil ?</h1>
+
+<ul>
+  <li id="a">
+    <input type="radio" id="a-option" name="selector">
+    <label for="a-option">XXXXXXXXXXXXXX</label>
+    <div class="check"></div>
+  </li>  
+  <li id="b">
+    <input type="radio" id="b-option" name="selector">
+    <label for="b-option">YYYYYYYYYYYY</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+  <li id="c">
+    <input type="radio" id="c-option" name="selector">
+    <label for="c-option">ZZZZZZZZZZZZZZZZZZZ</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+</ul>
+
+<div id="ResultDiv">
+	<div  id="validDiv" onclick="valid()" class="valid"><h1  id="result">VERIFIER</h1></div>
+</div>
+
+<script>
+  nextStepLink = "https://www.google.com/maps/dir/44.9118862,+-0.6810799/44.9123601,+-0.6777241/"
+  var newDiv = document.createElement("div");
+  newDiv.id = "test";
+  newDiv.className = "valid" 
+  newDiv.innerHTML = "<h1>VERIFIER</h1>" 
+
+function valid() {
+	resultDiv = document.getElementById("ResultDiv")
+  if(document.getElementById("c-option").checked)
+  {  	
+  	resultDiv.innerHTML = ""
+    var newDiv = document.createElement("div");
+  	newDiv.innerHTML = ""
+  	newDiv.className = "link"
+  	resultDiv.appendChild(newDiv);
+  	var newlink = document.createElement("a");
+    newlink.href =  nextStepLink;
+    newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
+  	newDiv.appendChild(newlink);
+  	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
+  	document.getElementById("a").innerHTML = "";
+  	document.getElementById("b").innerHTML = "";
+  	document.getElementById("c-option").checked = true;
+  	
+  }
+  else
+  {
+  	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
+  }
+}
+</script>
+</body>
+</html>

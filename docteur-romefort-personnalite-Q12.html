@@ -1,1 +1,79 @@
-TODO Q12
+<!DOCTYPE html>
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Special Elite');
+@import url("styles.css");
+</style>
+<body>
+
+<div class="container">
+<img src="Q0.PNG"  class="center"></img>
+<h2>
+<pre>
+
+    - Tiens cherche dans les fleurs si le ballon n’est pas resté cacher là
+    - Oh ben ça alors, j’ai trouvé une plume d’écrivain
+    - J’ai entendu dire que le Dr Romefort était bien embêté parce qu’il en avait perdu une 
+    
+</pre>
+
+
+<span ></span>
+<h1>Sous quel nom le Dr Romefort signait ses œuvres littéraires ?</h1>
+
+<ul>
+  <li id="a">
+    <input type="radio" id="a-option" name="selector">
+    <label for="a-option">Gric de Prat</label>
+    <div class="check"></div>
+  </li>  
+  <li id="b">
+    <input type="radio" id="b-option" name="selector">
+    <label for="b-option">Cante Gric</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+  <li id="c">
+    <input type="radio" id="c-option" name="selector">
+    <label for="c-option">Hagrid</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+</ul>
+
+<div id="ResultDiv">
+	<div  id="validDiv" onclick="valid()" class="valid"><h1  id="result">VERIFIER</h1></div>
+</div>
+
+<script>
+  nextStepLink = "https://www.google.com/maps/dir/44.9063870,+-0.6713375/44.903955,+-0.670160/"
+  var newDiv = document.createElement("div");
+  newDiv.id = "test";
+  newDiv.className = "valid" 
+  newDiv.innerHTML = "<h1>VERIFIER</h1>" 
+
+function valid() {
+	resultDiv = document.getElementById("ResultDiv")
+  if(document.getElementById("a-option").checked)
+  {  	
+  	resultDiv.innerHTML = ""
+    var newDiv = document.createElement("div");
+  	newDiv.innerHTML =  ""
+  	newDiv.className = "link"
+  	resultDiv.appendChild(newDiv);
+  	var newlink = document.createElement("a");
+    newlink.href =  nextStepLink;
+    newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
+  	newDiv.appendChild(newlink);
+  	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
+  	document.getElementById("c").innerHTML = "";
+  	document.getElementById("a-option").checked = true;
+    document.getElementById("b").innerHTML = "";
+  	
+  }
+  else
+  {
+  	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
+  }
+}
+</script>
+</body>
+</html>

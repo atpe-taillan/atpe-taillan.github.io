@@ -1,1 +1,79 @@
-TODO Q11
+<!DOCTYPE html>
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Special Elite');
+@import url("styles.css");
+</style>
+<body>
+
+<div class="container">
+<img src="Q0.PNG"  class="center"></img>
+<h2>
+<pre>
+
+    - Ah les ptits Tristan et Marinette, vous avez pas vot’ ballon avec vous ? j’aurai bien fait 2-3 passes avec vous pour me détendre
+    - Ben justement, on a fait toute la ville pour le retrouver, mais rien…
+    - Dépéchez vous de le retrouver car y’a match ce we !!! Faudrait pas devoir annuler la partie. Mais vous allez bien finir par retrouver…
+    
+</pre>
+
+
+<span ></span>
+<h1>Identifier la façade de l’ancienne usine électrique et donner son numéro de rue ?</h1>
+
+<ul>
+  <li id="a">
+    <input type="radio" id="a-option" name="selector">
+    <label for="a-option">87 A</label>
+    <div class="check"></div>
+  </li>  
+  <li id="b">
+    <input type="radio" id="b-option" name="selector">
+    <label for="b-option">91 B</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+  <li id="c">
+    <input type="radio" id="c-option" name="selector">
+    <label for="c-option">76 Bis</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+</ul>
+
+<div id="ResultDiv">
+	<div  id="validDiv" onclick="valid()" class="valid"><h1  id="result">VERIFIER</h1></div>
+</div>
+
+<script>
+  nextStepLink = "https://www.google.com/maps/dir/44.906468,+-0.6689215/44.9063870,+-0.6713375/"
+  var newDiv = document.createElement("div");
+  newDiv.id = "test";
+  newDiv.className = "valid" 
+  newDiv.innerHTML = "<h1>VERIFIER</h1>" 
+
+function valid() {
+	resultDiv = document.getElementById("ResultDiv")
+  if(document.getElementById("a-option").checked)
+  {  	
+  	resultDiv.innerHTML = ""
+    var newDiv = document.createElement("div");
+  	newDiv.innerHTML =  ""
+  	newDiv.className = "link"
+  	resultDiv.appendChild(newDiv);
+  	var newlink = document.createElement("a");
+    newlink.href =  nextStepLink;
+    newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
+  	newDiv.appendChild(newlink);
+  	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
+  	document.getElementById("c").innerHTML = "";
+  	document.getElementById("a-option").checked = true;
+    document.getElementById("b").innerHTML = "";
+  	
+  }
+  else
+  {
+  	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
+  }
+}
+</script>
+</body>
+</html>

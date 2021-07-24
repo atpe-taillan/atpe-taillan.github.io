@@ -1,1 +1,78 @@
-TODO Q13
+<!DOCTYPE html>
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Special Elite');
+@import url("styles.css");
+</style>
+<body>
+
+<div class="container">
+<img src="Q0.PNG"  class="center"></img>
+<h2>
+<pre>
+
+    - Cocorico !!! Cocorico !!!!
+    - Ah te voilà déjà à chanter la victoire et j’espère que tu chanteras autant après le match.
+    
+</pre>
+
+
+<span ></span>
+<h1>Combien de lettre i y at ‘il autour du coq ?</h1>
+
+<ul>
+  <li id="a">
+    <input type="radio" id="a-option" name="selector">
+    <label for="a-option">1</label>
+    <div class="check"></div>
+  </li>  
+  <li id="b">
+    <input type="radio" id="b-option" name="selector">
+    <label for="b-option">3</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+  <li id="c">
+    <input type="radio" id="c-option" name="selector">
+    <label for="c-option">5</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+</ul>
+
+<div id="ResultDiv">
+	<div  id="validDiv" onclick="valid()" class="valid"><h1  id="result">VERIFIER</h1></div>
+</div>
+
+<script>
+  nextStepLink = "clafin.html"
+  var newDiv = document.createElement("div");
+  newDiv.id = "test";
+  newDiv.className = "valid" 
+  newDiv.innerHTML = "<h1>VERIFIER</h1>" 
+
+function valid() {
+	resultDiv = document.getElementById("ResultDiv")
+  if(document.getElementById("c-option").checked)
+  {  	
+  	resultDiv.innerHTML = ""
+    var newDiv = document.createElement("div");
+  	newDiv.innerHTML =  "<pre> Victoria Galliae Restitutrix = Celle qui restitue la victoire à la France \nLe monument au mort a été financé par le Dr Romefort grâce aux bénéfices de ses œuvres.</pre>"
+  	newDiv.className = "link"
+  	resultDiv.appendChild(newDiv);
+  	var newlink = document.createElement("a");
+    newlink.href =  nextStepLink;
+    newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
+  	newDiv.appendChild(newlink);
+  	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
+  	document.getElementById("a").innerHTML = "";
+  	document.getElementById("c-option").checked = true;
+    document.getElementById("b").innerHTML = "";
+  	
+  }
+  else
+  {
+  	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
+  }
+}
+</script>
+</body>
+</html>

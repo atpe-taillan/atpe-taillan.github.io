@@ -1,1 +1,81 @@
-TODO Q9
+<!DOCTYPE html>
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Special Elite');
+@import url("styles.css");
+</style>
+<body>
+
+<div class="container">
+<img src="Q0.PNG"  class="center"></img>
+<h2>
+<pre>
+
+    - Bon le nid de la pie est par là, il faut grimper et chercher
+    - Allez fait moi la courte échelle
+    - Aïe aïe, ça pique, ça gratte…
+    - Bon ben rien… on redescend
+
+</pre>
+
+
+<span ></span>
+<h1>D’où vient le nom du Taillan Médoc ?</h1>
+
+<ul>
+  <li id="a">
+    <input type="radio" id="a-option" name="selector">
+    <label for="a-option">Des tailleurs de pierre qui vivent au bourg</label>
+    <div class="check"></div>
+  </li>  
+  <li id="b">
+    <input type="radio" id="b-option" name="selector">
+    <label for="b-option">Des tilleuls qui poussent dans la région</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+  <li id="c">
+    <input type="radio" id="c-option" name="selector">
+    <label for="c-option">Des chasses à cours dans les taillis « Taïot Taïot !! »</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>  
+</ul>
+
+<div id="ResultDiv">
+	<div  id="validDiv" onclick="valid()" class="valid"><h1  id="result">VERIFIER</h1></div>
+</div>
+
+<script>
+  nextStepLink = "https://www.google.com/maps/dir/44.9102108,+-0.6747834/44.9071298,+-0.6717797/"
+  var newDiv = document.createElement("div");
+  newDiv.id = "test";
+  newDiv.className = "valid" 
+  newDiv.innerHTML = "<h1>VERIFIER</h1>" 
+
+function valid() {
+	resultDiv = document.getElementById("ResultDiv")
+  if(document.getElementById("b-option").checked)
+  {  	
+  	resultDiv.innerHTML = ""
+    var newDiv = document.createElement("div");
+  	newDiv.innerHTML =     "<pre>\n Même si des chasses à cours ont été organisées par la famille Cruz au château de la dame blanche, \nle nom du Taillan Médoc se rattache au nom du tilleul, arbre qui poussait à l’état naturel dans la région. \n\nTilleul du latin Tilia, Tilius a donné plus tard Telhan.</pre>"
+
+  	newDiv.className = "link"
+  	resultDiv.appendChild(newDiv);
+  	var newlink = document.createElement("a");
+    newlink.href =  nextStepLink;
+    newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
+  	newDiv.appendChild(newlink);
+  	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
+  	document.getElementById("a").innerHTML = "";
+  	document.getElementById("b-option").checked = true;
+    document.getElementById("c").innerHTML = "";
+  	
+  }
+  else
+  {
+  	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
+  }
+}
+</script>
+</body>
+</html>
