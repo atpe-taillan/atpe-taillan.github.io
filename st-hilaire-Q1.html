@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Special Elite');
 @import url("styles.css");
 </style>
 <body>
@@ -53,7 +53,7 @@ Un joueur de tambour passe par là, on lui demande s’il a vu le ballon.
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/P%C3%B4le+Culturel+de+la+Haye+-+M%C3%A9diath%C3%A8que+Municipale,+8+Rue+de+Calavet,+33320+Le+Taillan-M%C3%A9doc/Skatepark/@44.9149753,-0.6836907,17.25z/data=!4m14!4m13!1m5!1m1!1s0xd54d6c86a7184d1:0x480586d0e491dbef!2m2!1d-0.6796524!2d44.9129965!1m5!1m1!1s0xd54d1505a8e9e29:0x13e337055881ee21!2m2!1d-0.68507!2d44.9158202!3e2"
+  nextStepLink = "https://www.google.com/maps/dir/44.903627,+-0.670337/44.904145,+-0.669818/"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -76,6 +76,8 @@ function valid() {
   	document.getElementById("a").innerHTML = "";
   	document.getElementById("c").innerHTML = "";
   	document.getElementById("b-option").checked = true;
+  	document.getElementById("d").innerHTML = "";
+  }
   else
   {
   	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
