@@ -7,33 +7,34 @@
 <body>
 
 <div class="container">
-<img  src=rebu.png class="center"></img>
-<h1>Résout ce rébus pour connaitre le nom de ce quartier</h1>
+<img src=Q0.PNG class="center"></img>
+<h2>
+<pre>
+  - Et dis, t’as vu dans les branches ça bouge
+  - Oh oui, j’ai vu un écureuil qui vient de sauter. Et on dirait qu’il nous regarde.
+  - Qu’est ce que vous faite par là
+  - On cherche notre ballon
+  - Oh ici y’a pas de ballon, y’a que des noisettes. Mmmmh Par contre, chez la pie de l’autre côté du
+  bois vous devriez y faire un tour.
+</pre>
+<h1>Trouves en rébus le nom de ce quartier</h1>
+
+<img  id="rebus" src=Q8r.PNG class="center"></img>
 
 <ul>
   <li id="a">
     <input type="radio" id="a-option" name="selector">
-    <label for="a-option">Bois de soltordotte  </label>
+    <label for="a-option">Rébus 1</label>
     <div class="check"></div>
   </li>  
   <li id="b">
     <input type="radio" id="b-option" name="selector">
-    <label for="b-option">Bois de la landhotte</label>    
+    <label for="b-option">Rébus 2</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
   <li id="c">
     <input type="radio" id="c-option" name="selector">
-    <label for="c-option">Buche de Special Eliterdotte</label>    
-    <div class="check"><div class="inside"></div></div>
-  </li>  
-  <li id="d">
-    <input type="radio" id="d-option" name="selector">
-    <label for="d-option">Bois de solenoel</label>    
-    <div class="check"><div class="inside"></div></div>
-  </li>  
-  <li id="e">
-    <input type="radio" id="e-option" name="selector">
-    <label for="e-option">Buche de Special Eliterdotte</label>    
+    <label for="c-option">Rébus 3</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
 </ul>
@@ -51,11 +52,12 @@
 
 function valid() {
 	resultDiv = document.getElementById("ResultDiv")
-  if(document.getElementById("b-option").checked)
+	rebus = document.getElementById("rebus")
+  if(document.getElementById("a-option").checked)
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML = ""
+  	newDiv.innerHTML = "<pre>\nBois de la landhotte\n<\pre>"
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
@@ -63,11 +65,11 @@ function valid() {
     newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
   	newDiv.appendChild(newlink);
   	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
-  	document.getElementById("a").innerHTML = "";
+  	document.getElementById("b").innerHTML = "";
   	document.getElementById("c").innerHTML = "";
-  	document.getElementById("b-option").checked = true;
-  	document.getElementById("d").innerHTML = "";
-  	document.getElementById("e").innerHTML = "";}
+    rebus.src="rebu.png"
+  	document.getElementById("a-option").checked = true;
+  }
   else
   {
   	document.getElementById("result").innerHTML = "Faux, Reessayez!!!";    
