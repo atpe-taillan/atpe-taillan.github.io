@@ -55,8 +55,12 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML =  "<pre> Victoria Galliae Restitutrix = Celle qui restitue la victoire à la France \nLe monument au mort a été financé par le Dr Romefort grâce aux bénéfices de ses œuvres.</pre>"
-  	newDiv.className = "link"
+  	newDiv.innerHTML =  `<pre> 
+  Victoria Galliae Restitutrix = Celle qui restitue la victoire à la France
+
+  En hommage aux soldats de la Grande guerre avec qui il a combattu, le dr Romefort publie en souscription, un fascicule des Coupons de Cadiche pour aider au financement du monument aux morts du Taillan.
+      <\pre>`
+    newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
     newlink.href =  nextStepLink;

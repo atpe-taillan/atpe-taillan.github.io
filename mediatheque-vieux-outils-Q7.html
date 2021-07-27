@@ -21,6 +21,7 @@
     
 </pre>
 
+<img src="outil.png"  class="center"></img>
 
 <span ></span>
 <h1>Comment s’appelle cet outil ?</h1>
@@ -28,17 +29,17 @@
 <ul>
   <li id="a">
     <input type="radio" id="a-option" name="selector">
-    <label for="a-option">XXXXXXXXXXXXXX</label>
+    <label for="a-option">un arrache-dent</label>
     <div class="check"></div>
   </li>  
   <li id="b">
     <input type="radio" id="b-option" name="selector">
-    <label for="b-option">YYYYYYYYYYYY</label>    
+    <label for="b-option">Un arrache-cep</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
   <li id="c">
     <input type="radio" id="c-option" name="selector">
-    <label for="c-option">ZZZZZZZZZZZZZZZZZZZ</label>    
+    <label for="c-option">Un tréteau</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
 </ul>
@@ -56,11 +57,17 @@
 
 function valid() {
 	resultDiv = document.getElementById("ResultDiv")
-  if(document.getElementById("c-option").checked)
+  if(document.getElementById("b-option").checked)
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML = ""
+  	newDiv.innerHTML = `<pre>
+      La pince arrache-ceps manuelle, basée sur le principe du parallélogramme, permet d'arracher les ceps de vignes sur une surface devant être replantée.
+Le fonctionnement est simple mais efficace :
+    • la chaîne de la pince se fixe à l'arrière d’une charrue
+    • l'utilisateur place manuellement les mâchoires autour de la souche à arracher
+    • en avançant et donc en tirant sur cette chaîne, la mâchoire se ferme et serre automatiquement la souche : la prise est optimale grâce aux dents acérées
+    <\pre>`
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
@@ -69,8 +76,8 @@ function valid() {
   	newDiv.appendChild(newlink);
   	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
   	document.getElementById("a").innerHTML = "";
-  	document.getElementById("b").innerHTML = "";
-  	document.getElementById("c-option").checked = true;
+  	document.getElementById("c").innerHTML = "";
+  	document.getElementById("b-option").checked = true;
   	
   }
   else

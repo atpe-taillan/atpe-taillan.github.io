@@ -34,7 +34,7 @@
   </li>  
   <li id="c">
     <input type="radio" id="c-option" name="selector">
-    <label for="c-option">Hagrid</label>    
+    <label for="c-option">Los copons de Cadiche</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
 </ul>
@@ -56,7 +56,9 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML =  ""
+  	newDiv.innerHTML =  `<pre>
+      GRIC DE PRAT, de son véritable nom Roger Romefort, est né au Taillan en 1886. Il est probablement le dernier des poètes gascons tirant son inspiration de l’œuvre de Meste Verdier. Une plaque a été apposée sur sa demeure avenue de Soulac. Le Docteur Romefort exerçait à Bordeaux la profession de cardiologue. 
+    <\pre>`
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
