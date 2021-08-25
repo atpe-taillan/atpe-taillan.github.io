@@ -7,7 +7,7 @@
 <body>
 
 <div class="container">
-<img src="Q9.PNG"  class="center"></img>
+<img src="img/Q9.PNG"  class="center"></img>
 <h2>
 <pre>
 
@@ -45,7 +45,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.9102108,+-0.6747834/44.9071298,+-0.6717797/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.9102108,+-0.6747834&daddr=44.9071298,+-0.6717797&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -57,8 +57,12 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML =     "<pre>\n Même si des chasses à cours ont été organisées par la famille Cruze au château de la dame blanche, \nle nom du Taillan Médoc se rattache au nom du tilleul, arbre qui poussait à l’état naturel dans la région. \n\nTilleul du latin Tilia, Tilius a donné plus tard Telhan.</pre>"
-
+  	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/L.JPG" class="letter"></img>
+                        <pre class="history">Pour info : Origine du nom du Taillan
+Même si des chasses à cours ont été organisées par la famille Cruze au château de la dame blanche, le nom du Taillan Médoc se rattache au nom du tilleul, arbre qui poussait à l’état naturel dans la région. 
+Tilleul du latin Tilia, Tilius a donné plus tard Telhan.
+ <\pre>`
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");

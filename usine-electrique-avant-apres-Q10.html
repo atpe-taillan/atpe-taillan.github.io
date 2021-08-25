@@ -7,15 +7,15 @@
 <body>
 
 <div class="container">
-<img src="Q10.PNG"  class="center"></img>
+<img src="img/Q10.PNG"  class="center"></img>
 <h2>
 <pre>
 
-    - Ah la jeunesse dans la rue qu’est ce que vous faîtes de beau ?
-    - On cherche notre ballon, vous l’avez pas vu ?
-    - Il était comment votre ballon ?
-    - Ben en cuir, un peu cabossé
-    - Ça me dit rien, mais faut persévérer les jeunes
+  - Ah la jeunesse dans la rue qu’est ce que vous faîtes de beau ?
+  - On cherche notre ballon, vous l’avez pas vu ?
+  - Il était comment votre ballon ?
+  - Ben en cuir, un peu cabossé
+  - Ça me dit rien, mais faut persévérer les jeunes
     
 </pre>
 
@@ -46,7 +46,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.9071298,+-0.6717797/44.906468,+-0.6689215/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.9071298,+-0.6717797&daddr=44.906468,+-0.6689215&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -58,7 +58,8 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML =  ""
+  	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/E.JPG" class="letter"></img>` 
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");

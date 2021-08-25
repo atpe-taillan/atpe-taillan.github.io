@@ -7,7 +7,7 @@
 <body>
 
 <div class="container">
-<img src=Q4.PNG class="center"></img>
+<img src="img/Q4.PNG" class="center"></img>
 <h2>
 <pre>
   - Regarde, la voisine est dans son jardin. On va lui demander si elle a vu notre ballon ?
@@ -44,7 +44,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.905285,+-0.675623/44.906413,+-0.676265/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.905285,+-0.675623&daddr=44.906413,+-0.676265&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -56,7 +56,9 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML = ""
+  	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/E.JPG" class="letter"></img>` 
+
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");

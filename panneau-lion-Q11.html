@@ -7,16 +7,16 @@
 <body>
 
 <div class="container">
-<img src="Q11.PNG"  class="center"></img>
+<img src="img/Q11.PNG"  class="center"></img>
 <h2>
 <pre>
 
-    - Ah les ptits Tristan et Marinette, vous avez pas vot’ ballon ? j’aurais bien fait 2-3 passes avec vous pour me détendre
-    - Ben justement, on l’a perdu et on le cherche à travers toute la ville, mais rien…
-    - Dépéchez vous de le retrouver car y’a match ce we !!! Faudrait pas devoir annuler la partie. Mais vous allez bien finir par retrouver…
-    
+  - Ah les ptits Tristan et Marinette, vous avez pas vot’ ballon? j’aurais bien fait 2-3 passes avec vous pour me détendre
+  - Ben justement, on l’a perdu et on le cherche à travers toute la ville, mais rien…
+  - Dépéchez vous de le retrouver car y’a match ce we !!! Faudrait pas devoir annuler la partie. Mais vous allez bien finir par retrouver…
+
 </pre>
-<img src="usine-avant.JPG"  class="center"></img>
+<img src="img/usine-avant.JPG"  class="center"></img>
 
 <span ></span>
 <h1>Identifier la façade de l’ancienne usine électrique et donner son numéro de rue ?</h1>
@@ -45,7 +45,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.906468,+-0.6689215/44.9063870,+-0.6713375/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.906468,+-0.6689215&daddr=44.9063870,+-0.6713375&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -57,9 +57,11 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML =  `<pre>
-      Au n° 87 se trouvait l’usine électrique alimentant la scierie et une partie du village. L' électricité était produite par une machine à vapeur alimentée par les chutes de bois de la scierie. 
-      <\pre>`
+  	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/T.JPG" class="letter"></img>
+                        <pre class="history">Pour info : Des usines au centre du Taillan
+Au n° 87 se trouvait l’usine électrique alimentant la scierie et une partie du village. L'électricité était produite par une machine à vapeur alimentée par les chutes de bois de la scierie. 
+<\pre>`
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");

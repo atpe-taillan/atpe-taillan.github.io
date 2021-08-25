@@ -7,13 +7,11 @@
 <body>
 
 <div class="container">
-<img src="Q13.PNG"  class="center"></img>
+<img src="img/Q13.PNG"  class="center"></img>
 <h2>
 <pre>
-
-    - Cocorico !!! Cocorico !!!! Le ballon est là au pied du monument aux morts !!
-    - Ah te voilà déjà à chanter la victoire et j’espère que tu chanteras autant après le match.
-    
+  - Cocorico !!! Cocorico !!!! Le ballon est là au pied du monument aux morts !!
+  - Ah te voilà déjà à chanter la victoire et j’espère que tu chanteras autant après le match. 
 </pre>
 
 
@@ -55,11 +53,11 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML =  `<pre> 
-  Victoria Galliae Restitutrix = Celle qui restitue la victoire à la France
-
-  En hommage aux soldats de la Grande guerre avec qui il a combattu, le dr Romefort publie en souscription, un fascicule des Coupons de Cadiche pour aider au financement du monument aux morts du Taillan.
-      <\pre>`
+    newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/L.JPG" class="letter"></img>
+                        <pre class="history">Pour info : Le monument aux morts
+L’inscription Victoria Galliae Restitutrix signifie « Celle qui restitue la victoire à la France »
+En hommage aux soldats de la Grande guerre avec qui il a combattu, le dr Romefort publie en souscription, un fascicule des Coupons de Cadiche pour aider au financement du monument aux morts du Taillan.<\pre>`
     newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");

@@ -7,7 +7,7 @@
 <body>
 
 <div class="container">
-<img  src=Q1.PNG class="center"></img>
+<img src="img/Q1.PNG" class="center"></img>
 <h2>
 <pre>
   - Ah ben nous voilà devant la statue de St-Hilaire !
@@ -21,7 +21,7 @@ Un joueur de tambour passe par là, on lui demande s’il a vu le ballon.
 </pre>
 
 
-<img  src=rigodon.png class="center"></img>
+<img src="img/rigodon.png" class="center"></img>
 <span ></span>
 <h1>Que tient saint Hilaire dans ses mains ?</h1>
 
@@ -53,7 +53,7 @@ Un joueur de tambour passe par là, on lui demande s’il a vu le ballon.
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.903627,+-0.670337/44.904145,+-0.669818/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.903627,+-0.670337&daddr=44.904145,+-0.669818&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -65,14 +65,15 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML = `<pre> 
-Une fête patronale avait lieu chaque début d’année en l’honneur du protecteur de la paroisse.
-Dès le samedi 16h la fanfare sillonnait les rues du bourg. Puis le bal s’ouvrait dans la grandsalle de "chez
-Maxime", En face, devant la mairie, la fête foraine s’était installée dans la semaine avec des autos
-tamponneuses, des manèges et des baraques.
-Au programme du dimanche figurait la célèbre foire aux porcelets du Taillan.
-La fête se terminait le lundi soir par un feu d’artifice.<\pre>`
-  	newDiv.className = "link"
+  	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+    <img src="img/C.JPG" class="letter"></img>
+    <pre class="history"> Pour info : La Fête de la Saint Hilaire
+  Une fête patronale avait lieu chaque début d’année en l’honneur du protecteur de la paroisse. 
+  Dès le samedi, la fanfare sillonnait les rues du bourg. Devant la mairie, la fête foraine s’installait avec des autos tamponneuses, des manèges et des baraques. Au programme du dimanche figurait la célèbre foire aux porcelets du Taillan. Et la fête se terminait le lundi soir par un feu d’artifice.
+
+<\pre>`
+
+    newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
     newlink.href =  nextStepLink;

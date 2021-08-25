@@ -7,14 +7,13 @@
 <body>
 
 <div class="container">
-<img src="Q12.PNG"  class="center"></img>
+<img src="img/Q12.PNG"  class="center"></img>
 <h2>
 <pre>
 
     - Tiens cherche dans les fleurs si le ballon n’est pas resté caché là
     - Oh ben ça alors, j’ai trouvé une plume d’écrivain mais toujours pas de ballon
-    - J’ai entendu dire que le Dr Romefort était bien embêté parce qu’il en avait perdu une 
-    
+    - J’ai entendu dire que le Dr Romefort était bien embêté parce qu’il en avait perdu une.
 </pre>
 
 
@@ -44,7 +43,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.9063870,+-0.6713375/44.903955,+-0.670160/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.9063870,+-0.6713375&daddr=44.903955,+-0.670160&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -56,9 +55,11 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML =  `<pre>
-      GRIC DE PRAT, de son véritable nom Roger Romefort, est né au Taillan en 1886. Il est probablement le dernier des poètes gascons tirant son inspiration de l’œuvre de Meste Verdier. Une plaque a été apposée sur sa demeure avenue de Soulac. Le Docteur Romefort exerçait à Bordeaux la profession de cardiologue. 
-    <\pre>`
+  	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/O.JPG" class="letter"></img>
+                        <pre class="history">Pour info : identité de Gric de Prat ?
+De son véritable nom Roger Romefort, est né au Taillan en 1886. Il est probablement le dernier des poètes gascons tirant son inspiration de l’œuvre de Meste Verdier. Une plaque a été apposée sur sa demeure avenue de Soulac. Le Docteur Romefort exerçait à Bordeaux la profession de cardiologue. 
+<\pre>`
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");

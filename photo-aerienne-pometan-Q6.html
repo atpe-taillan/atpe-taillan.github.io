@@ -7,7 +7,7 @@
 <body>
 
 <div class="container">
-<img src="Q6.PNG" class="center"></img>
+<img src="img/Q6.PNG" class="center"></img>
 <h2>
 <pre>
   - Hou hou – Hou hou - Qu’est-ce qui vous arrive les enfants ?
@@ -16,7 +16,7 @@
   - Hou hou, ne vous découragez pas mes enfants ! suivez-moi à tire d’aile !!
   
 </pre>
-<img src=pm.png class="center"></img>
+<img src="img/pm.png" class="center"></img>
 
 
 <span ></span>
@@ -45,7 +45,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.907625,+-0.676206/44.9118862,+-0.6810799/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.907625,+-0.676206&daddr=44.9118862,+-0.6810799&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -57,9 +57,13 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML = `<pre>
-      Le permis de construire de l’école élémentaire Jean Pometan a été délivré en mars 1980. L’achèvement des travaux date du 20 mai 1981 Elle s’appelle à l’époque l’école du bois des Ormes. 
-      </pre>` 
+  	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/N.JPG" class="letter"></img> 
+    <pre class="history">Pour info : L’école Jean Pometan
+    Le permis de construire de l’école élémentaire a été délivré en mars 1980. L’achèvement des travaux date du 20 mai 1981 Elle s’appelle à l’époque l’école du bois des Ormes. 
+    <\pre>` 
+
+
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");

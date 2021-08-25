@@ -7,7 +7,7 @@
 <body>
 
 <div class="container">
-<img src=Q5.PNG class="center"></img>
+<img src="img/Q5.PNG" class="center"></img>
 <h2>
 <pre>
   - Viens par là, on va se faufiler pour fouiller la cour.
@@ -47,7 +47,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.906413,+-0.676265/44.907625,+-0.676206/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.906413,+-0.676265&daddr=44.907625,+-0.676206&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -59,7 +59,9 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML = ""
+  	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/M.JPG" class="letter"></img>` 
+
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");

@@ -7,19 +7,18 @@
 <body>
 
 <div class="container">
-<img src=Q8.PNG class="center"></img>
+<img src="img/Q8.PNG" class="center"></img>
 <h2>
 <pre>
   - Et dis, t’as vu dans les branches ça bouge
-  - Oh oui, j’ai vu un écureuil qui vient de sauter. Et on dirait qu’il nous regarde.
+  - Oh oui, j’ai vu un écureuil qui vient de sauter.  Et on dirait qu’il nous regarde.
   - Qu’est ce que vous faites par là ?
   - On cherche notre ballon
-  - Oh ici y’a pas de ballon, y’a que des noisettes. Mmmmh Par contre, vous devriez faire un tour
-  chez la pie de l’autre côté du bois.
+  - Oh ici y’a pas de ballon, y’a que des noisettes. Mmmmh Par contre, vous devriez faire un tour chez la pie de l’autre côté du bois.
 </pre>
 <h1>Trouves en rébus le nom de ce quartier</h1>
 
-<img  id="rebus" src=Q8r.PNG class="center"></img>
+<img  id="rebus" src="img/Q8r.PNG" class="center"></img>
 
 <ul>
   <li id="a">
@@ -44,7 +43,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.9123601,+-0.6777241/44.9102108,+-0.6747834/"
+  nextStepLink = "https://www.google.com/maps/preview?saddr=44.9123601,+-0.6777241&daddr=44.9102108,+-0.6747834&dirflg=w"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -57,7 +56,8 @@ function valid() {
   {  	
   	resultDiv.innerHTML = ""
     var newDiv = document.createElement("div");
-  	newDiv.innerHTML = "<pre>\nBois de la landhotte\n<\pre>"
+  	newDiv.innerHTML = `<pre>La Landotte – BONNE REPONSE – En bonus, vous gagnez le :<\pre>
+                        <img src="img/H.JPG" class="letter"></img>`
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
