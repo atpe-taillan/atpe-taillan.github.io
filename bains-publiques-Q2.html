@@ -58,14 +58,15 @@ function valid() {
     var newDiv = document.createElement("div");
   	newDiv.innerHTML = `<pre> BONNE REPONSE – En bonus, vous gagnez le :<\pre>
                         <img src="img/O.JPG" class="letter"></img>
-                        <pre class="history">Après la guerre de 14-18, Mme Georgina Cruze, présidente de la Croix-Rouge, finance l’installation des bains douches publics. Les élèves de l’école publique y vont faire leur toilette une fois par semaine, sous la conduite de leur instituteur.
+                        <pre class="history">Pour info : Les bains publics
+                          Après la guerre de 14-18, Mme Georgina Cruze, présidente de la Croix-Rouge, finance l’installation des bains douches publics. Les élèves de l’école publique y vont faire leur toilette une fois par semaine, sous la conduite de leur instituteur.
                         <\pre>`
 
   	newDiv.className = "link"
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
     newlink.href =  nextStepLink;
-    newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
+    newlink.innerHTML = ">>> Etape Suivante >>>";
   	newDiv.appendChild(newlink);
   	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
   	document.getElementById("a").innerHTML = "";

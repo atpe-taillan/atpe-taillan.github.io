@@ -27,7 +27,7 @@
 <ul>
   <li id="a">
     <input type="radio" id="a-option" name="selector">
-    <label for="a-option">Charpentier qui a participé à la construction de l’école</label>
+    <label for="a-option">Architecte qui a construit l’école</label>
     <div class="check"></div>
   </li>  
   <li id="b">
@@ -37,7 +37,7 @@
   </li>  
   <li id="c">
     <input type="radio" id="c-option" name="selector">
-    <label for="c-option">Maire de 1977 à 1995</label>    
+    <label for="c-option">Maire du Taillan 1977 à 1995</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
 </ul>
@@ -66,7 +66,7 @@ function valid() {
   	resultDiv.appendChild(newDiv);
   	var newlink = document.createElement("a");
     newlink.href =  nextStepLink;
-    newlink.innerHTML = "!!! BRAVO !!! >>> Etape Suivante >>>";
+    newlink.innerHTML = ">>> Etape Suivante >>>";
   	newDiv.appendChild(newlink);
   	resultDiv.innerHTML = "<h1>" + resultDiv.innerHTML + "<\h1>"
   	document.getElementById("a").innerHTML = "";
