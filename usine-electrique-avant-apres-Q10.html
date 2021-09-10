@@ -21,24 +21,29 @@
 
 
 <span ></span>
-<h1>Quel animal surveille le carrefour ?</h1>
+<h1>Savez-vous qu’en chauffant du sable jusqu’à 2300°C, on obtient :</h1>
 
 <ul>
   <li id="a">
     <input type="radio" id="a-option" name="selector">
-    <label for="a-option">Un pigeon</label>
+    <label for="a-option">De l’argile</label>
     <div class="check"></div>
   </li>  
   <li id="b">
     <input type="radio" id="b-option" name="selector">
-    <label for="b-option">Une chauve-souris</label>    
+    <label for="b-option">Du papier</label>    
     <div class="check"><div class="inside"></div></div>
   </li>  
   <li id="c">
     <input type="radio" id="c-option" name="selector">
-    <label for="c-option">Un lion</label>    
+    <label for="c-option">Du verre</label>    
     <div class="check"><div class="inside"></div></div>
-  </li>  
+  </li>
+  <li id="d">
+    <input type="radio" id="d-option" name="selector">
+    <label for="d-option">Du tissu</label>    
+    <div class="check"><div class="inside"></div></div>
+  </li>    
 </ul>
 
 <div id="ResultDiv">
@@ -46,7 +51,7 @@
 </div>
 
 <script>
-  nextStepLink = "https://www.google.com/maps/dir/44.9071298,+-0.6717797/44.906468,+-0.6689215/"
+  nextStepLink = "https://www.google.com/maps/dir/44.9071298,+-0.6717797/44.906990,-0.668886/"
   var newDiv = document.createElement("div");
   newDiv.id = "test";
   newDiv.className = "valid" 
@@ -70,6 +75,7 @@ function valid() {
   	document.getElementById("a").innerHTML = "";
   	document.getElementById("c-option").checked = true;
     document.getElementById("b").innerHTML = "";
+    document.getElementById("d").innerHTML = "";
   	
   }
   else
